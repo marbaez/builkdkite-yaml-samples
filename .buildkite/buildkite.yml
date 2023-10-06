@@ -1,2 +1,6 @@
-env:
 steps:
+  - command: "./build.sh"
+    label: "Compile"
+  - wait
+  - command: "./deploy.sh"
+    label: "Package"
