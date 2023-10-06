@@ -1,6 +1,8 @@
 steps:
   - command: "./build.sh"
     label: "Compile"
+    artifact_paths:
+      - "build/*"
   - wait
   - command: "./deploy.sh"
     label: "Package"
