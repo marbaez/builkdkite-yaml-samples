@@ -1,9 +1,8 @@
-FILE=./build/object.txt
+FILE=build/object.txt
 echo "Deploy begins"
 
 mkdir -p build
-buildkite-agent artifact download build/object.txt ./build/object.txt
-
+buildkite-agent artifact download build/object.txt build
 if test -f "${FILE}"; then
     echo "${FILE} exists"
 else
