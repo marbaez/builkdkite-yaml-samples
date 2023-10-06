@@ -4,5 +4,9 @@ steps:
     artifact_paths:
       - "build/*"
   - wait
+  - command: "./test.sh"
+    label: "Tests"
+    if: build.message !~ /no test/
   - command: "./deploy.sh"
     label: "Package"
+    if: build.message =~ /launch deploy/
