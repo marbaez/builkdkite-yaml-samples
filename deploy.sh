@@ -1,4 +1,4 @@
-FILE=build/object.txt
+FILE=./build/object.txt
 echo "Deploy begins"
 
 mkdir -p build
